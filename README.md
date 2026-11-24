@@ -2,6 +2,8 @@
 
 *Your flight. Your instruments. Your view.*
 
+📝 Read the story behind the app: [planeMode: I Vibe Coded an In-Flight Tracker That Works in Airplane Mode](https://www.abrandao.com/?p=7346)
+
 Native Android (Kotlin, Jetpack Compose, MVVM + Hilt) in-flight tracker that uses the phone's own GNSS receiver and sensors. Not an ADS-B or airline-data app.
 
 ## Screenshots
