@@ -19,8 +19,23 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Release signing reads credentials from ~/.gradle/gradle.properties (never committed):
+    // PLANEMODE_STORE_FILE, PLANEMODE_STORE_PASSWORD, PLANEMODE_KEY_ALIAS, PLANEMODE_KEY_PASSWORD
+    val releaseStoreFile = providers.gradleProperty("PLANEMODE_STORE_FILE").orNull
+    signingConfigs {
+        if (releaseStoreFile != null) {
+            create("release") {
+                storeFile = file(releaseStoreFile)
+                storePassword = providers.gradleProperty("PLANEMODE_STORE_PASSWORD").get()
+                keyAlias = providers.gradleProperty("PLANEMODE_KEY_ALIAS").get()
+                keyPassword = providers.gradleProperty("PLANEMODE_KEY_PASSWORD").get()
+            }
+        }
+    }
+
     buildTypes {
         release {
+            if (releaseStoreFile != null) signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }

@@ -14,6 +14,20 @@ Native Android (Kotlin, Jetpack Compose, MVVM + Hilt) in-flight tracker that use
 </p>
 <p align="center"><sub>Home · Map · Altitude profile · Cockpit HUD · Flight info (simulated cruise, captured on a Pixel emulator)</sub></p>
 
+## Download & install (sideload)
+1. On your Android phone (Android 8.0 or later), download **`planeMode-v1.0.0.apk`** from the [latest release](https://github.com/acbrandao/planemode/releases/latest).
+2. Open the downloaded file. If Android blocks it, allow **Install unknown apps** for your browser or file manager when prompted (Settings → Apps → *your browser* → Install unknown apps).
+3. Tap **Install**, then open planeMode and allow location access.
+
+Or install from a computer with USB debugging enabled:
+```bash
+adb install planeMode-v1.0.0.apk
+```
+
+No account, API key or network connection is needed. To try it on the ground, turn on Settings → **Simulation** → **Enable mock flight** (see [Try it without flying](#try-it-without-flying-simulation)).
+
+> The APK is signed with the project's release key. If you previously installed a debug build you built yourself, uninstall it first, because Android won't update an app signed with a different key.
+
 ## Requirements
 - Android Studio (recent), JDK 17+ (builds were verified with JDK 25)
 - Android SDK platform 37 (Gradle installs it automatically if the SDK licences are accepted)
@@ -26,6 +40,16 @@ Native Android (Kotlin, Jetpack Compose, MVVM + Hilt) in-flight tracker that use
 ./gradlew :app:testDebugUnitTest      # unit tests
 ```
 Or open the folder in Android Studio and run the `app` configuration.
+
+### Signed release build
+`./gradlew :app:assembleRelease` signs the APK when these properties are set in `~/.gradle/gradle.properties` (keep them out of the repo):
+```properties
+PLANEMODE_STORE_FILE=/path/to/planemode-release.jks
+PLANEMODE_STORE_PASSWORD=...
+PLANEMODE_KEY_ALIAS=planemode
+PLANEMODE_KEY_PASSWORD=...
+```
+Without them, the release APK is built unsigned. Output: `app/build/outputs/apk/release/app-release.apk`.
 
 ## Try it without flying (simulation)
 Settings → **Simulation** tab → **Enable mock flight**. Then press **START FLIGHT** on Home.
