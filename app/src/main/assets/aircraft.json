@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "note": "Approximate family-level reference values for display only. Not specifications for any exact aircraft variant.",
+  "aircraft": [
+    {"id": "B737", "manufacturer": "Boeing", "family": "737 (Next Generation)", "typicalCruiseKts": 450, "maxCruiseKts": 473, "typicalCruiseAltFt": 35000, "maxAltFt": 41000, "rangeNm": 2900, "silhouette": "NARROWBODY"},
+    {"id": "B737MAX", "manufacturer": "Boeing", "family": "737 MAX", "typicalCruiseKts": 453, "maxCruiseKts": 473, "typicalCruiseAltFt": 36000, "maxAltFt": 41000, "rangeNm": 3500, "silhouette": "NARROWBODY"},
+    {"id": "B777", "manufacturer": "Boeing", "family": "777", "typicalCruiseKts": 490, "maxCruiseKts": 512, "typicalCruiseAltFt": 35000, "maxAltFt": 43100, "rangeNm": 7300, "silhouette": "WIDEBODY"},
+    {"id": "B787", "manufacturer": "Boeing", "family": "787 Dreamliner", "typicalCruiseKts": 488, "maxCruiseKts": 516, "typicalCruiseAltFt": 39000, "maxAltFt": 43000, "rangeNm": 7300, "silhouette": "WIDEBODY"},
+    {"id": "A320", "manufacturer": "Airbus", "family": "A320", "typicalCruiseKts": 447, "maxCruiseKts": 470, "typicalCruiseAltFt": 35000, "maxAltFt": 39800, "rangeNm": 3300, "silhouette": "NARROWBODY"},
+    {"id": "A321", "manufacturer": "Airbus", "family": "A321", "typicalCruiseKts": 447, "maxCruiseKts": 470, "typicalCruiseAltFt": 35000, "maxAltFt": 39800, "rangeNm": 3500, "silhouette": "NARROWBODY"},
+    {"id": "A330", "manufacturer": "Airbus", "family": "A330", "typicalCruiseKts": 470, "maxCruiseKts": 496, "typicalCruiseAltFt": 37000, "maxAltFt": 41450, "rangeNm": 6350, "silhouette": "WIDEBODY"},
+    {"id": "A350", "manufacturer": "Airbus", "family": "A350", "typicalCruiseKts": 488, "maxCruiseKts": 513, "typicalCruiseAltFt": 39000, "maxAltFt": 43100, "rangeNm": 8100, "silhouette": "WIDEBODY"},
+    {"id": "ERJ", "manufacturer": "Embraer", "family": "ERJ / E-Jet", "typicalCruiseKts": 430, "maxCruiseKts": 470, "typicalCruiseAltFt": 35000, "maxAltFt": 41000, "rangeNm": 2000, "silhouette": "REGIONAL"}
+  ]
+}
