@@ -78,3 +78,10 @@ The maps are vector only (MapLibre, OpenGL ES renderer). No raster tiles are use
 ## Notes
 - Ground speed comes from GPS (it is not airspeed). Heading is the GNSS course over ground. HUD pitch and roll are estimates from the phone's sensors. The takeoff alert is an approximate speed threshold, not V1. The ETA is a straight-line estimate.
 - Tracking runs in a location-type foreground service, so it continues with the screen off. Background-location permission is not requested.
+
+## License
+planeMode is released under the [MIT License](LICENSE).
+
+Bundled data keeps its own terms: Natural Earth map data and OurAirports airport data are in the public domain. Online map detail comes from [OpenFreeMap](https://openfreemap.org) / OpenStreetMap contributors (© OpenStreetMap contributors, ODbL), with attribution shown on the map. Third-party libraries (AndroidX, MapLibre, Hilt, Kotlin coroutines and others) are under their own licenses, mostly Apache-2.0 and BSD.
+
+This app is not a navigation aid. Do not rely on it for flight safety or official flight information.
